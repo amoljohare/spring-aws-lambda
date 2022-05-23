@@ -1,14 +1,21 @@
 version: 0.2
-
 phases:
-  build:
-    commands:
-      - echo Entered the build phase...
-      - mvn clean package
-  post_build:
-    commands:
-      - echo Build completed successfully
-artifacts:
-  files:
-    - target/springbootawslambda.jar
-  discard-paths: yes
+
+
+    install:
+        commands:
+            - echo Nothing to do in the install phase
+    pre_build:
+        commands:
+            - echo Nothing to do in the pre_build phase
+    build:
+        commands:
+            - echo build started on 'date'
+            - mvn install
+    post_build:
+        commands:
+            - echo build completed on 'date'
+    artifacts:
+        files:
+            - target/springbootawslambda.jar
+
