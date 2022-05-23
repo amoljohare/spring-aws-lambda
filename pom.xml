@@ -117,7 +117,7 @@
 			</plugin>
 
 		</plugins>
-		<finalName>springboot-aws-lambda</finalName>
+		<finalName>springbootawslambda</finalName>
 	</build>
 
 </project>
